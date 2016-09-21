@@ -72,6 +72,7 @@ static int lept_parse_number(lept_context* c, lept_value* v) {
     
     if (c->json[0] == '0') {
         auto i = strlen(c->json);
+        
         if (i >= 2 && c->json[1] != '.') {
             return LEPT_PARSE_ROOT_NOT_SINGULAR;
         }
